@@ -25,9 +25,8 @@ class MainGUI(QMainWindow):
         self.ui.CameraMode.clicked.connect(lambda: UI_Function.videoMode(self))
         self.ui.ImageMode.clicked.connect(lambda: UI_Function.imageMode(self))
         self.ui.btn_start.clicked.connect(lambda: UI_Function.load(self))
-        self.ui.btn_save.clicked.connect(lambda: UI_Function.savePhoto(self))
-        self.ui.BlurValue.valueChanged['int'].connect(lambda: UI_Function.blur_value(self,self.ui.BlurValue.value()))
-        self.ui.BrightValue.valueChanged['int'].connect(lambda: UI_Function.brightness_value(self,self.ui.BrightValue.value()))
+        self.ui.BlurValue.valueChanged['int'].connect(lambda: UI_Function.brightness_value())
+        self.ui.BrightValue.valueChanged['int'].connect(lambda: UI_Function.blur_value())
 
 
 if __name__ == "__main__":
